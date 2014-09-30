@@ -1,4 +1,4 @@
-_welcome:
+welcome:
     path:     /
     defaults: { _controller: AcmeDemoBundle:Welcome:index }
 
@@ -10,3 +10,12 @@ _demo:
     resource: "@AcmeDemoBundle/Controller/DemoController.php"
     type:     annotation
     prefix:   /demo
+
+# src/Acme/DemoBundle/Resources/config/routing.yml
+random:
+    path:     /random/{limit}
+    defaults: { _controller: AcmeDemoBundle:Random:index }
+
+test:
+    path:    /test/{test}
+    defaults: { _controller: AcmeDemoBundle:Test:animal }
